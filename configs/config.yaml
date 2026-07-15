@@ -1,0 +1,20 @@
+base_model: xlm-roberta-base
+max_seq_length: 128
+batch_size: 16
+temp: 0.07
+
+# Phase 1: contrastive alignment on real opus-100 parallel sentences
+lr: 2.0e-5
+contrastive_epochs: 1
+max_parallel_examples: 50000
+
+# Phase 2: full backbone fine-tuning on English + code-switch augmentation
+ner_lr: 2.0e-5       # backbone base LR (layer-wise decayed)
+head_lr: 1.0e-3       # projection/NER head LR
+layer_decay: 0.95
+ner_epochs: 5
+switch_prob: 0.3      # per-word code-switch probability
+augment_ratio: 0.5    # fraction of train set duplicated as code-switched
+
+# Phase 3: zero-shot evaluation targets
+target_langs: [tr, de, ar]

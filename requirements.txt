@@ -1,0 +1,8 @@
+transformers>=4.30.0
+torch>=2.0.0
+datasets>=2.14.0
+accelerate>=0.20.0
+seqeval>=1.2.2
+scikit-learn>=1.2.0
+matplotlib
+lang2vec

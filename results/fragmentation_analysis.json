@@ -1,0 +1,37 @@
+{
+  "per_language": {
+    "tr": {
+      "f1": 0.7675,
+      "subwords_per_word": 1.7513
+    },
+    "de": {
+      "f1": 0.7435,
+      "subwords_per_word": 1.6093
+    },
+    "ar": {
+      "f1": 0.4563,
+      "subwords_per_word": 1.7153
+    },
+    "ko": {
+      "f1": 0.5086,
+      "subwords_per_word": 2.2124
+    },
+    "fi": {
+      "f1": 0.7578,
+      "subwords_per_word": 1.9546
+    },
+    "sw": {
+      "f1": 0.6748,
+      "subwords_per_word": 1.5527
+    },
+    "id": {
+      "f1": 0.4967,
+      "subwords_per_word": 1.594
+    },
+    "ru": {
+      "f1": 0.6102,
+      "subwords_per_word": 1.9139
+    }
+  },
+  "pearson_r_fragmentation_vs_f1": -0.1502
+}

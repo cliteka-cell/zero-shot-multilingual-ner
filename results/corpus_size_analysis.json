@@ -1,0 +1,15 @@
+{
+  "source": "Conneau et al. 2020, 'Unsupervised Cross-lingual Representation Learning at Scale' (XLM-R), Table 6 (Appendix A), CC-100 corpus sizes in GiB per language used for XLM-R pretraining",
+  "per_language": {
+    "tr": {"f1": 0.7675, "cc100_gib": 20.9},
+    "de": {"f1": 0.7435, "cc100_gib": 66.6},
+    "ar": {"f1": 0.4563, "cc100_gib": 28.0},
+    "ko": {"f1": 0.5086, "cc100_gib": 54.2},
+    "fi": {"f1": 0.7578, "cc100_gib": 54.3},
+    "sw": {"f1": 0.6748, "cc100_gib": 1.6},
+    "id": {"f1": 0.4967, "cc100_gib": 148.3},
+    "ru": {"f1": 0.6102, "cc100_gib": 278.0}
+  },
+  "pearson_r_corpus_gib_vs_f1": -0.2137,
+  "pearson_r_log_corpus_gib_vs_f1": -0.2349
+}

@@ -1,0 +1,38 @@
+# Model checkpoints: ~1.1GB each, ~16GB total.
+# GitHub rejects any file over 100MB. These are reproducible from src/train_zero_shot.py.
+checkpoints/
+*.pt
+*.bin
+*.safetensors
+
+# HuggingFace dataset cache / downloaded corpora (regenerable)
+data/
+
+# Python
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# Secrets (none present today, but do not let one slip in later)
+.env
+*.key
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Shell brace-expansion accident: a literal directory named "{src,notebooks,data,configs}"
+{src,notebooks,data,configs}/
+
+# NOTE: results/ IS tracked on purpose. It is ~936KB of JSON/PNG and holds the
+# ablation, multi-seed, error-analysis and alignment findings the paper cites.
+
+# MEMORY.md: internal Claude-agent context file ("read this first if context was
+# compacted"), written to the assistant rather than to a reader. Kept LOCAL so the
+# public portfolio repo shows the research artifacts (PAPER.md, DEVELOPMENT.md)
+# rather than the working scaffolding. To publish it anyway:
+#   git add -f MEMORY.md && git commit -m "Add project memory" && git push
+MEMORY.md

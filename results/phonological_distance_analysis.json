@@ -1,0 +1,39 @@
+{
+  "source": "lang2vec (Littell et al. 2017) URIEL phonology_knn features, cosine distance from English",
+  "comparison": "Lauscher et al. (2020) report PHON similarity as the strongest NER predictor (Pearson r=0.78, Spearman r=0.86, mBERT, WikiANN); this is a phonological DISTANCE metric, so a replicating result would show a comparably large NEGATIVE r",
+  "per_language": {
+    "tr": {
+      "f1": 0.7675,
+      "phon_distance_from_english": 0.1818
+    },
+    "de": {
+      "f1": 0.7435,
+      "phon_distance_from_english": 0.1942
+    },
+    "ar": {
+      "f1": 0.4563,
+      "phon_distance_from_english": 0.2994
+    },
+    "ko": {
+      "f1": 0.5086,
+      "phon_distance_from_english": 0.2538
+    },
+    "fi": {
+      "f1": 0.7578,
+      "phon_distance_from_english": 0.1296
+    },
+    "sw": {
+      "f1": 0.6748,
+      "phon_distance_from_english": 0.0909
+    },
+    "id": {
+      "f1": 0.4967,
+      "phon_distance_from_english": 0.0909
+    },
+    "ru": {
+      "f1": 0.6102,
+      "phon_distance_from_english": 0.1419
+    }
+  },
+  "pearson_r_phon_distance_vs_f1": -0.3869
+}

@@ -1,0 +1,73 @@
+experiment,config,language,metric,value,notes
+ablation,E_full_pipeline,tr,zero_shot_f1,0.7675,E: Full pipeline
+ablation,E_full_pipeline,de,zero_shot_f1,0.7435,E: Full pipeline
+ablation,E_full_pipeline,ar,zero_shot_f1,0.4563,E: Full pipeline
+ablation,A_baseline_frozen,tr,zero_shot_f1,0.54337,A: Frozen baseline
+ablation,A_baseline_frozen,de,zero_shot_f1,0.538282,A: Frozen baseline
+ablation,A_baseline_frozen,ar,zero_shot_f1,0.22055,A: Frozen baseline
+ablation,B_full_finetune_only,tr,zero_shot_f1,0.758362,B: Full fine-tune
+ablation,B_full_finetune_only,de,zero_shot_f1,0.75306,B: Full fine-tune
+ablation,B_full_finetune_only,ar,zero_shot_f1,0.494974,B: Full fine-tune
+ablation,C_plus_contrastive,tr,zero_shot_f1,0.735965,C: +Contrastive
+ablation,C_plus_contrastive,de,zero_shot_f1,0.744653,C: +Contrastive
+ablation,C_plus_contrastive,ar,zero_shot_f1,0.446659,C: +Contrastive
+ablation,D_plus_code_switch,tr,zero_shot_f1,0.740107,D: +Code-switch
+ablation,D_plus_code_switch,de,zero_shot_f1,0.742847,D: +Code-switch
+ablation,D_plus_code_switch,ar,zero_shot_f1,0.466329,D: +Code-switch
+multiseed,B_seed42,tr,zero_shot_f1,0.740856,"Config B, seed 42"
+multiseed,B_seed42,de,zero_shot_f1,0.750068,"Config B, seed 42"
+multiseed,B_seed42,ar,zero_shot_f1,0.490092,"Config B, seed 42"
+multiseed,B_seed43,tr,zero_shot_f1,0.76011,"Config B, seed 43"
+multiseed,B_seed43,de,zero_shot_f1,0.759915,"Config B, seed 43"
+multiseed,B_seed43,ar,zero_shot_f1,0.514349,"Config B, seed 43"
+multiseed,B_seed44,tr,zero_shot_f1,0.767397,"Config B, seed 44"
+multiseed,B_seed44,de,zero_shot_f1,0.75336,"Config B, seed 44"
+multiseed,B_seed44,ar,zero_shot_f1,0.444092,"Config B, seed 44"
+few_shot,k=0,tr,f1,0.7675,0 labeled target examples
+few_shot,k=10,tr,f1,0.759956,10 labeled target examples
+few_shot,k=50,tr,f1,0.819184,50 labeled target examples
+few_shot,k=100,tr,f1,0.828185,100 labeled target examples
+few_shot,k=500,tr,f1,0.860571,500 labeled target examples
+few_shot,k=0,de,f1,0.7435,0 labeled target examples
+few_shot,k=10,de,f1,0.751411,10 labeled target examples
+few_shot,k=50,de,f1,0.761569,50 labeled target examples
+few_shot,k=100,de,f1,0.793233,100 labeled target examples
+few_shot,k=500,de,f1,0.810593,500 labeled target examples
+few_shot,k=0,ar,f1,0.4563,0 labeled target examples
+few_shot,k=10,ar,f1,0.682829,10 labeled target examples
+few_shot,k=50,ar,f1,0.726353,50 labeled target examples
+few_shot,k=100,ar,f1,0.746887,100 labeled target examples
+few_shot,k=500,ar,f1,0.786822,500 labeled target examples
+alignment,before,tr,alignment_gap,0.005046,"true-pair minus shuffled-pair cosine sim, before contrastive"
+alignment,before,de,alignment_gap,0.007467,"true-pair minus shuffled-pair cosine sim, before contrastive"
+alignment,before,ar,alignment_gap,0.005168,"true-pair minus shuffled-pair cosine sim, before contrastive"
+alignment,after,tr,alignment_gap,0.629186,"true-pair minus shuffled-pair cosine sim, after contrastive"
+alignment,after,de,alignment_gap,0.635631,"true-pair minus shuffled-pair cosine sim, after contrastive"
+alignment,after,ar,alignment_gap,0.55788,"true-pair minus shuffled-pair cosine sim, after contrastive"
+extra_languages,E_full_pipeline,ko,zero_shot_f1,0.508618,"eval-only, no retraining"
+extra_languages,E_full_pipeline,fi,zero_shot_f1,0.757787,"eval-only, no retraining"
+extra_languages,E_full_pipeline,sw,zero_shot_f1,0.674777,"eval-only, no retraining"
+extra_languages,E_full_pipeline,id,zero_shot_f1,0.496663,"eval-only, no retraining"
+extra_languages,E_full_pipeline,ru,zero_shot_f1,0.610198,"eval-only, no retraining"
+translate_train,lexicon_proxy,tr,f1,0.734411,"MUSE lexicon word-for-word substitution, not NMT"
+translate_train,lexicon_proxy,de,f1,0.7218,"MUSE lexicon word-for-word substitution, not NMT"
+translate_train,lexicon_proxy,ar,f1,0.439004,"MUSE lexicon word-for-word substitution, not NMT"
+translate_train,zero_shot_baseline,tr,f1,0.7675,config E reference for translate-train comparison
+translate_train,zero_shot_baseline,de,f1,0.7435,config E reference for translate-train comparison
+translate_train,zero_shot_baseline,ar,f1,0.4563,config E reference for translate-train comparison
+fragmentation_hypothesis,subwords_per_word,tr,subwords_per_word,1.7513,Pearson r vs F1 = -0.1502
+fragmentation_hypothesis,subwords_per_word,de,subwords_per_word,1.6093,Pearson r vs F1 = -0.1502
+fragmentation_hypothesis,subwords_per_word,ar,subwords_per_word,1.7153,Pearson r vs F1 = -0.1502
+fragmentation_hypothesis,subwords_per_word,ko,subwords_per_word,2.2124,Pearson r vs F1 = -0.1502
+fragmentation_hypothesis,subwords_per_word,fi,subwords_per_word,1.9546,Pearson r vs F1 = -0.1502
+fragmentation_hypothesis,subwords_per_word,sw,subwords_per_word,1.5527,Pearson r vs F1 = -0.1502
+fragmentation_hypothesis,subwords_per_word,id,subwords_per_word,1.594,Pearson r vs F1 = -0.1502
+fragmentation_hypothesis,subwords_per_word,ru,subwords_per_word,1.9139,Pearson r vs F1 = -0.1502
+corpus_size_hypothesis,cc100_gib,tr,cc100_gib,20.9,Pearson r vs F1 (log) = -0.2349
+corpus_size_hypothesis,cc100_gib,de,cc100_gib,66.6,Pearson r vs F1 (log) = -0.2349
+corpus_size_hypothesis,cc100_gib,ar,cc100_gib,28.0,Pearson r vs F1 (log) = -0.2349
+corpus_size_hypothesis,cc100_gib,ko,cc100_gib,54.2,Pearson r vs F1 (log) = -0.2349
+corpus_size_hypothesis,cc100_gib,fi,cc100_gib,54.3,Pearson r vs F1 (log) = -0.2349
+corpus_size_hypothesis,cc100_gib,sw,cc100_gib,1.6,Pearson r vs F1 (log) = -0.2349
+corpus_size_hypothesis,cc100_gib,id,cc100_gib,148.3,Pearson r vs F1 (log) = -0.2349
+corpus_size_hypothesis,cc100_gib,ru,cc100_gib,278.0,Pearson r vs F1 (log) = -0.2349
